@@ -16,7 +16,7 @@
             <h1>Math Sprint Game</h1>
         </div>
         <!-- Splash Page -->
-        <div class="card" id="splash-page" hidden>
+        <div class="card" id="splash-page">
             <form id="start-form">
                 <div class="selection-container">
 
@@ -26,7 +26,7 @@
                         <input type="radio" id="value-10" name="questions" value="10">
                         <span class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
                     <!-- 25 Questions Radio Input -->
@@ -35,7 +35,7 @@
                         <input type="radio" id="value-25" name="questions" value="25">
                         <span class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
                     <!-- 50 Questions Radio Input -->
@@ -44,7 +44,7 @@
                         <input type="radio" id="value-50" name="questions" value="50">
                         <span class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
                     <!-- 99 Questions Radio Input -->
@@ -53,7 +53,7 @@
                         <input type="radio" id="value-99" name="questions" value="99">
                         <span class="best-score">
                             <span>Best Score</span>
-                            <span class="best-score-value">0.0s</span>
+                            <span class="best-score-value"></span>
                         </span>
                     </div>
                 </div>
@@ -64,12 +64,38 @@
             </form>
         </div>
         <!-- Countdown Page -->
-        <div class="card" id="countdown-page">
-            <h1 class="countdown">3</h1>
+        <div class="card" id="countdown-page" hidden>
+            <h1 class="countdown"></h1>
+        </div>
+        <!-- Game page -->
+        <div class="card" id="game-page" hidden>
+            <!-- Item COntainer -->
+            <div class="item-container">
+            </div>
+            <!-- Right/Wrong Buttons -->
+            <div class="item-footer">
+                <button class="wrong" onclick="select(true)">Wrong</button>
+                <button class="right" onclick="select(false)">Right</button>
+            </div>
+        </div>
+        <!-- Score Page -->
+        <div class="card" id="score-page" hidden>
+            <!-- Score Container -->
+            <div class="score-container">
+                <h1 class="title">Your Time</h1>
+                <h1 class="final-time"></h1>
+                <h1 class="base-time"></h1>
+                <h1 class="penalty-time"></h1>
+            </div>
+            <!-- Play Again Button -->
+            <div class="score-footer">
+                <button class="play-again" onclick="playAgain()" hidden>Play Again</button>
+            </div>
         </div>
     </div>
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="./shuffle.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
